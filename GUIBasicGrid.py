@@ -11,15 +11,21 @@ gui.geometry("700x700") #set the size of canvas
 gui.title("GUI Basic") #Title of GUI
 
 
-#GUI attributr
+#GUI attribute
+'''
+using grid we don't need to pack!!!
+'''
 l1 = Label(text = "Username:")
-l1.pack(side=LEFT) #set the position with .pack()
-e1 = Entry(bd = 5) #bd: border
-e1.pack(side=RIGHT)
+l2 = Label(text = "password")
+e1 = Entry()
+e2 = Entry()
+l1.grid(row = 0)
+l2.grid(row = 1)
+e1.grid(row=0,column=1)
+e2.grid(row=1,column=1)
 
-'''
-side : LEFT, RIGHT, TOP
-'''
+
+
 #Displaying
 gui.mainloop()  
 
